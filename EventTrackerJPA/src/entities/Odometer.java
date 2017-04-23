@@ -28,16 +28,26 @@ public class Odometer {
 	
 	
 	private int average;
+	
+	private String name;
 
 	
 	//getters and setters
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public int getAverage() {
 		return average;
 	}
 	
-	public void setAverage(int average) {
-		this.average = average;
+	public int setAverage(int average) {
+		return this.average = average;
 	}
 
 	public int getDays() {
@@ -56,10 +66,6 @@ public class Odometer {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public void setStartingOdometer(int startingOdometer) {
 		this.startingOdometer = startingOdometer;
 	}
@@ -72,10 +78,10 @@ public class Odometer {
 		this.endingOdometer = endingOdometer;
 	}
 
-	//toString();
 	@Override
 	public String toString() {
-		return "Event [startingOdometer=" + startingOdometer + ", endingOdometer=" + endingOdometer + "]";
+		return "Odometer [id=" + id + ", startingOdometer=" + startingOdometer + ", endingOdometer=" + endingOdometer
+				+ ", days=" + days + ", average=" + average + ", name=" + name + "]";
 	}
 	
 	

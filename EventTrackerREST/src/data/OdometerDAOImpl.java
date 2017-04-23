@@ -40,12 +40,8 @@ public class OdometerDAOImpl implements OdometerDAO {
 		int so = odometer.getStartingOdometer();
 		int eo = odometer.getEndingOdometer();
 		int d = odometer.getDays();
-		int avg = odometer.getAverage();
-		int sum;
-		
-		sum = so+eo;
-		
-		avg=sum/d;
+		int sum = eo-so;
+		int avg = odometer.setAverage(sum/d);
 		
 		return avg;
 	}
@@ -73,6 +69,7 @@ public class OdometerDAOImpl implements OdometerDAO {
 		managed.setEndingOdometer(odometer.getEndingOdometer());
 		managed.setDays(odometer.getDays());
 		managed.setAverage(odometer.getAverage());
+		managed.setName(odometer.getName());
 		em.flush();
 		return managed;
 	}

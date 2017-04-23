@@ -7,9 +7,9 @@ import entities.Odometer;
 public interface OdometerDAO {
 	public List<Odometer> index();
 	public Odometer show(int id);
-	public Odometer create(Odometer event);
+	public Odometer create(Odometer odometer);
 	public boolean destroy(int id);
-	public Odometer update(int id, Odometer event);
+	public Odometer update(int id, Odometer odometer);
 	
 	public int avgMilesDriven(int id);
 	

@@ -1,0 +1,51 @@
+#startingOdometer{
+
+}
+
+#endingOdometer{
+  margin-left: 2em;
+}
+
+#days{
+  margin-left: 2em;
+}
+
+#average{
+  margin-left: 2em;
+}
+
+#table{
+  margin: auto;
+  width: 50%;
+  margin-top: 2em;
+}
+#delete{
+  margin-left: 2em;
+}
+
+#submit{
+  margin-left: 2em;
+}
+
+#singleCar{
+  margin: auto;
+  width: 50%;
+}
+
+#createButtonDiv{
+  /*background-color: lightgray;
+  border: solid;
+  border-radius: 5px;
+  border-color: black;
+  border-width: medium;*/
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.button:hover{
+  text-align: center;
+}
+#create{
+  margin-top: 2em;
+}

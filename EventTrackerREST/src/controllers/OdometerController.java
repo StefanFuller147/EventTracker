@@ -39,7 +39,7 @@ public class OdometerController {
 	}
 	
 
-	//create new start, end, day values for odometer
+	//create new car
 		@RequestMapping(value = "odometers", method = RequestMethod.POST)
 		public Odometer create(@RequestBody String jsonQuiz, HttpServletResponse res){
 			
