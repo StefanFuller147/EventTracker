@@ -80,4 +80,26 @@ public class OdometerController {
 			return null;
 		}
 		
+//		//sets the average miles driven 
+//		@RequestMapping(value = "odometers/{averageId}", method = RequestMethod.GET)
+//		public int retrieveAverageMilesDriven(@PathVariable int averageId){
+//			//********
+//			Odometer o = new Odometer();
+//			int startM = o.getStartingOdometer();
+//			int endM = o.getEndingOdometer();
+//	
+//			int daysDriven = o.getDays();
+//			
+//			int difference = endM - startM;
+//			
+//			int average = difference/daysDriven;
+//			
+//			o.setAverage(average);
+//			
+//					
+//			//********		
+//			
+//			return average;
+//		}
+		
 }

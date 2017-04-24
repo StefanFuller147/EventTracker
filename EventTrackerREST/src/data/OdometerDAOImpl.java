@@ -14,6 +14,8 @@ public class OdometerDAOImpl implements OdometerDAO {
 	@PersistenceContext
 	private EntityManager em;
 
+	
+	//shows the full list of cars and their values
 	@Override
 	public List<Odometer> index() {
 		String query = "SELECT o FROM Odometer o";
@@ -21,31 +23,37 @@ public class OdometerDAOImpl implements OdometerDAO {
 		
 	}
 
+	//shows an individual car from id
 	@Override
 	public Odometer show(int id) {
 		return em.find(Odometer.class, id);
 	}
 
+	
+	//makes a new car
 	@Override
 	public Odometer create(Odometer odometer) {
-			
+		
 		em.persist(odometer);
 		em.flush();
 		return odometer;
 	}
 
+	//setting the average mileage based on start and end odometer values
 	@Override
 	public int avgMilesDriven(int id) {
 		Odometer odometer = new Odometer();
 		int so = odometer.getStartingOdometer();
 		int eo = odometer.getEndingOdometer();
-		int d = odometer.getDays();
-		int sum = eo-so;
-		int avg = odometer.setAverage(sum/d);
+		int days = odometer.getDays();
+		int difference = eo-so;
+		int avg = odometer.setAverage(difference/days);
 		
 		return avg;
 	}
-
+	
+	
+	//removes a car from the list 
 	@Override
 	public boolean destroy(int id) {
 		Odometer managed = em.find(Odometer.class, id);
@@ -61,7 +69,7 @@ public class OdometerDAOImpl implements OdometerDAO {
 		return false;
 	}
 	
-
+	//updates a current car
 	@Override
 	public Odometer update(int id, Odometer odometer) {
 		Odometer managed = em.find(Odometer.class, id);

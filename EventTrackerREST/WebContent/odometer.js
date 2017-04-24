@@ -128,7 +128,20 @@ var view = function(id, data) {
     var $tb = $('<tbody>');
     $th.append($tb);
 
+//************************************Test code
 
+
+    // var tripTotal = 0;
+    //     count++;
+    //
+    //     var difference = v.endingOdometer - v.startingOdometer;
+    //
+    //
+    //     $td1.text(v.days);
+    //     $td2.text(v.startingOdometer);
+    //     $td3.text(v.endingOdometer);
+    //     $td4.text(tripTotal);
+//***********************************End Test code
 
     var $tr1 = $('<tr>');
     $tr1.text('Starting Mileage: ' + data.startingOdometer);
@@ -143,7 +156,13 @@ var view = function(id, data) {
     $tb.append($tr3);
 
     var $tr4 = $('<tr>');
-    $tr4.text('Average miles per day: ' + data.average);
+    var difference = data.endingOdometer - data.startingOdometer;
+    console.log('difference' + difference);
+    // console.log('in difference: '+ difference);
+    // console.log('in days: '+ days);
+    var average = difference/ data.days;
+    console.log('average'+average);
+    $tr4.text('Average miles per day: ' + average);
     $tb.append($tr4);
 
 

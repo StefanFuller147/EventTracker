@@ -30,7 +30,6 @@ public class Odometer {
 	private int average;
 	
 	private String name;
-
 	
 	//getters and setters
 	
